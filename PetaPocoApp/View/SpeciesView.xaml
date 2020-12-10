@@ -1,0 +1,264 @@
+﻿<Window x:Class="PetaPocoApp.View.SpeciesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetaPocoApp"
+        mc:Ignorable="d"
+        Background="#EEEEEE"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        Title="Species Editor" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TextBoxStyle" TargetType="TextBox">
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="Padding" Value="2,0,2,2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/OpenControls.Wpf.DatabaseDialogs;component/View/Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="300" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Species" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="0" Grid.Column="2" Text="{Binding SpeciesName}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Synonyms" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="2" Grid.Column="2" Text="{Binding Synonyms}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Content="Common Name" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding Common_name}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Content="Fruiting Body" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="6" Grid.Column="2" Text="{Binding Fruiting_body}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="8" Grid.Column="0" Content="Cap" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="8" Grid.Column="2" Text="{Binding Cap}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="10" Grid.Column="0" Content="Hymenium" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="10" Grid.Column="2" Text="{Binding Hymenium}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="12" Grid.Column="0" Content="Gills" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="12" Grid.Column="2" Text="{Binding Gills}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="14" Grid.Column="0" Content="Pores" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="14" Grid.Column="2" Text="{Binding Pores}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="16" Grid.Column="0" Content="Spines" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="16" Grid.Column="2" Text="{Binding Spines}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="18" Grid.Column="0" Content="Stem" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="18" Grid.Column="2" Text="{Binding Stem}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="20" Grid.Column="0" Content="Flesh" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="20" Grid.Column="2" Text="{Binding Flesh}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="22" Grid.Column="0" Content="Smell" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="22" Grid.Column="2" Text="{Binding Smell}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="24" Grid.Column="0" Content="Taste" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="24" Grid.Column="2" Text="{Binding Taste}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="26" Grid.Column="0" Content="Season" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="26" Grid.Column="2" Text="{Binding Season}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="28" Grid.Column="0" Content="Distribution" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="28" Grid.Column="2" Text="{Binding Distribution}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="30" Grid.Column="0" Content="Habitat" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="30" Grid.Column="2" Text="{Binding Habitat}" Style="{StaticResource TextBoxStyle}"/>
+
+
+                <Label Grid.Row="32" Grid.Column="0" Content="Spore Print" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="32" Grid.Column="2" Text="{Binding Spore_print}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="34" Grid.Column="0" Content="Microscopic Features" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="34" Grid.Column="2" Text="{Binding Microscopic_features}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="36" Grid.Column="0" Content="Edibility" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="36" Grid.Column="2" Text="{Binding Edibility}" Style="{StaticResource TextBoxStyle}"/>
+
+                <Label Grid.Row="38" Grid.Column="0" Content="Notes" Style="{StaticResource LabelStyle}"/>
+                <TextBox Grid.Row="38" Grid.Column="2" Text="{Binding Notes}" Style="{StaticResource TextBoxStyle}"/>
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TabControl Grid.Row="0" Grid.Column="0" x:Name="_tabControl" ItemsSource="{Binding Images}" VerticalAlignment="Top">
+                    <TabControl.ItemTemplate>
+                        <!-- this is the header template-->
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Header}" />
+                        </DataTemplate>
+                    </TabControl.ItemTemplate>
+                    <TabControl.ContentTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Row="0" Grid.Column="0" Width="{Binding RelativeSource={RelativeSource Self}, Path=Source.PixelWidth}"
+Height="{Binding RelativeSource={RelativeSource Self}, Path=Source.PixelHeight}" Source="{Binding Path, Mode=OneWay}"/>
+
+                                <Grid Grid.Row="1" Grid.Column="0" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="10"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="10"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="1" Grid.Column="1" Content="Path" Style="{StaticResource LabelStyle}"/>
+                                    <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Path, Mode=TwoWay}" IsReadOnly="True" Style="{StaticResource TextBoxStyle}"/>
+                                    <Label Grid.Row="3" Grid.Column="1" Content="Description" Style="{StaticResource LabelStyle}"/>
+                                    <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding description, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
+                                    <Label Grid.Row="5" Grid.Column="1" Content="Copyright" Style="{StaticResource LabelStyle}"/>
+                                    <TextBox Grid.Row="5" Grid.Column="3" Text="{Binding copyright, Mode=TwoWay}" Style="{StaticResource TextBoxStyle}"/>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </TabControl.ContentTemplate>
+                </TabControl>
+                <Grid Grid.Row="2" Grid.Column="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="_buttonAdd" Content="Add" Style="{StaticResource Button80Style}" Click="_buttonAdd_Click"/>
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="_buttonRemove" Content="Remove" Style="{StaticResource Button80Style}" Click="_buttonRemove_Click"/>
+                    <Button Grid.Row="0" Grid.Column="4" x:Name="_buttonStart" Content="&lt;&lt;" Style="{StaticResource Button40Style}" Click="_buttonStart_Click"/>
+                    <Button Grid.Row="0" Grid.Column="6" x:Name="_buttonLeft" Content="&lt;" Style="{StaticResource Button40Style}" Click="_buttonLeft_Click"/>
+                    <Button Grid.Row="0" Grid.Column="8" x:Name="_buttonRight" Content="&gt;" Style="{StaticResource Button40Style}" Click="_buttonRight_Click"/>
+                    <Button Grid.Row="0" Grid.Column="10" x:Name="_buttonEnd" Content="&gt;&gt;" Style="{StaticResource Button40Style}" Click="_buttonEnd_Click"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="_buttonOK" Content="OK" Style="{StaticResource Button80Style}" Click="_buttonOK_Click"/>
+            <Button Grid.Row="0" Grid.Column="3" x:Name="_buttonCancel" Content="Cancel" Style="{StaticResource Button80Style}" Click="_buttonCancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>

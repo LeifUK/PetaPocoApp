@@ -1,0 +1,62 @@
+﻿<Window x:Class="PetaPocoApp.View.SpeciesListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetaPocoApp"
+        mc:Ignorable="d"
+        Background="#EEEEEE"
+        Loaded="Window_Loaded"
+        Title="Species List" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/OpenControls.Wpf.DatabaseDialogs;component/View/Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid Grid.Row="1" Grid.Column="1" x:Name="_datagrid" ItemsSource="{Binding SpeciesCollection}" SelectedItem="{Binding SelectedSpecies}" CanUserSortColumns="False" MouseDoubleClick="_datagrid_MouseDoubleClick" KeyDown="_datagrid_KeyDown"/>
+
+        <Grid Grid.Row="3" Grid.Column="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="_buttonEdit" Content="Edit" Style="{StaticResource Button80Style}" Click="_buttonEdit_Click"/>
+            <Button Grid.Row="0" Grid.Column="3" x:Name="_buttonNew" Content="New" Style="{StaticResource Button80Style}" Click="_buttonNew_Click"/>
+            <Button Grid.Row="0" Grid.Column="5" x:Name="_buttonDelete" Content="Delete" Style="{StaticResource Button80Style}" Click="_buttonDelete_Click"/>
+            <Button Grid.Row="0" Grid.Column="9" x:Name="_buttonConfigure" Content="Configure" Style="{StaticResource Button100Style}" Click="_buttonConfigure_Click"/>
+            <Button Grid.Row="0" Grid.Column="11" x:Name="_buttonCloseDB" Content="Close" Style="{StaticResource Button80Style}" Click="_buttonCloseDB_Click"/>
+        </Grid>
+    </Grid>
+</Window>
