@@ -56,11 +56,13 @@ namespace PetaPocoApp.View
         {
             ViewModel.SpeciesListViewModel speciesListViewModel = DataContext as ViewModel.SpeciesListViewModel;
 
-            if (speciesListViewModel.ISpeciesManager.ImagePathEnumerator.GetEnumerator().MoveNext() == false)
+            var enumerator = speciesListViewModel.ISpeciesManager.ImagePathEnumerator.GetEnumerator();
+            if (enumerator.MoveNext() == false)
             {
                 System.Windows.MessageBox.Show("Cannot create species. Please edit the configuration and add one or more image folders.");
                 return;
             }
+            enumerator.Dispose();
 
             DBObject.Species species = new DBObject.Species();
 
